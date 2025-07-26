@@ -1,0 +1,16 @@
+import math
+
+lonA = float(input("Masukkan Longitude titik A (radian) : "))
+latA = float(input("Masukkan Latitude titik A (radian) : "))
+lonB = float(input("Masukkan Longitude titik B (radian) : "))
+latB = float(input("Masukkan Latitude titik B (radian) : "))
+
+dlon = lonA - lonB
+dlat = latA - latB
+
+a = math.sin(dlon / 2) ** 2 + math.cos(latA) * math.cos(latB) * math.sin(dlat/2) ** 2
+b = 2 * math.asin(math.sqrt(a))
+
+jarak = b * 6371
+
+print(jarak)
