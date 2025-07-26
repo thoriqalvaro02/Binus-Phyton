@@ -1,0 +1,6 @@
+jari = float(input("Masukkan jari bola (meter) : "))
+
+volume = 4 *  3.14 * jari ** 3
+
+print(volume)
+print("meter kubik")
