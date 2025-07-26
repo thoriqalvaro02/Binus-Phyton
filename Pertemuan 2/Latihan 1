@@ -5,3 +5,4 @@ tinggi = float(input("Masukkan tinggi balok : "))
 volume = panjang * lebar * tinggi
 
 print(volume)
+print("meter kubik")
