@@ -1,0 +1,7 @@
+jari = float(input("Masukkan jari alas tabung (meter) : "))
+tinggi = float(input("Masukkan tinggi tabung (meter) : "))
+
+volume = 3.14 * tinggi * jari ** 2 
+
+print(volume)
+print("meter kubik")
