@@ -1,0 +1,29 @@
+import math
+
+a = float(input("Enter value of a: "))
+b = float(input("Enter value of b: "))
+c = float(input("Enter value of c: "))
+
+if a == 0:
+    print("It's not a quadratic equation.")
+else:
+    discriminant = b**2 - 4 * a * c
+    print(f"/nQuadratic Equation: {a}x² + {b}x + {c} = 0")
+    print(f"Discriminant: {discriminant}")
+    
+    if discriminant > 0:
+        x1 = (-b + math.sqrt(discriminant)) / (2 * a)
+        x2 = (-b + math.sqrt(discriminant)) / (2 * a)
+        print("It has 2 distinct roots.")
+        print(f"Root x1 = {x1}")
+        print(f"Root x2 = {x2}")
+    elif discriminant == 0:
+        x = -b / 2 * a
+        print("It has a double root.")
+        print(f"Root x = {x}")
+    else:
+        real_part = -b / 2 * a
+        imaginary_part = math.sqrt(abs(discriminant)) / (2 * a)
+        print("It has imaginary roots.")
+        print(f"Root x1 = {real_part} + {imaginary_part}")
+        print(f"Root x2 = {real_part} - {imaginary_part}")
