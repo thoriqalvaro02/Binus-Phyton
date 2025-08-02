@@ -1,0 +1,48 @@
+def celcius_to_fahrenheit(c):
+    return (c * 9/5) + 32
+def celcius_to_kelvin(c):
+    return c + 273
+def fahrenheit_to_celsius(f):
+    return (f - 32) * 5/9
+def fahrenheit_to_kelvin(f):
+    return (f - 32) * 5/9 + 273
+def kelvin_to_celsius(k):
+    return k - 273
+def kelvin_to_fahrenheit(k):
+    return (k - 273) * 9/5 + 32
+    
+print("Temperature Conversion Menu:")
+print("1. Celsius to Fahrenheit")
+print("2. Celsius to Kelvin")
+print("3. Fahrenheit to Celsius")
+print("4. Fahrenheit to Kelvin")
+print("5. Kelvin to Celsius")
+print("6. Kelvin to Fahrenheit")
+
+option = int(input("Select a conversion option (1-6): "))
+
+if option == 1:
+    c = float(input("Enter temperature in Celsius: "))
+    f = celcius_to_fahrenheit(c)
+    print(f"{c}°C = {f:.2f}°F")
+    
+if option == 2:
+    c = float(input("Enter temperature in Celsius: "))
+    k = celcius_to_kelvin(c)
+    print(f"{c}°C = {k:.2f}°K")
+if option == 3:
+    f = float(input("Enter temperature in Fahrenheit: "))
+    c = fahrenheit_to_celcius(f)
+    print(f"{f}°F = {c:.2f}°C")
+if option == 4:
+    f = float(input("Enter temperature in Fahrenheit: "))
+    k = fahrenheit_to_kelvin(f)
+    print(f"{f}°F = {k:.2f}°K")
+if option == 5:
+    k = float(input("Enter temperature in Kelvin: "))
+    c = kelvin_to_celcius(k)
+    print(f"{k}°K = {c:.2f}°C")
+if option == 6:
+    k = float(input("Enter temperature in Kelvin: "))
+    f = kelvin_to_fahrenheit(k)
+    print(f"{k}°K = {f:.2f}°F")
