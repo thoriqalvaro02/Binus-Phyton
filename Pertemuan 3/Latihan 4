@@ -1,0 +1,18 @@
+a = float(input("Enter length of side A: "))
+b = float(input("Enter length of side B: "))
+c = float(input("Enter length of side C: "))
+
+if (a + b > c) and (a + c > b) and (b + c > a):
+    sides = sorted([a, b, c])  
+    if round(sides[0]**2 + sides[1]**2, 5) == round(sides[2]**2, 5):
+        triangle_type = "Right-angled Triangle"
+    elif a == b == c:
+        triangle_type = "Equilateral Triangle"
+    elif a == b or a == c or b == c:
+        triangle_type = "isosceles Triangle"
+    else:
+        triangle_type = "Scalene Triangle"
+else:
+    triangle_type = "Not a Triangle"
+        
+print("Triangle Type:", triangle_type)
