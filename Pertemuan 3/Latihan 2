@@ -1,0 +1,24 @@
+age = int(input("Enter your age: "))
+
+if age < 0:
+    print("Invalid input. Age cannot be negative.")
+elif age <= 1:
+    print("Category: Baby")
+elif age <= 3:
+    print("Category: Toddler")
+elif age <= 5:
+    print("Category: Preschooler")
+elif age <= 12:
+    print("Category: Child")
+elif age <= 17:
+    print("Category: Teenager")
+elif age <= 21:
+    print("Category: Young Adult")
+elif age <= 30:
+    print("Category: Pre-adult")
+elif age <= 50:
+    print("Category: Adult")
+elif age <= 70:
+    print("Category: Pre-elderly")
+else:
+    print("Category: Elderly")
