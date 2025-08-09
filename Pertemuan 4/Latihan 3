@@ -1,0 +1,14 @@
+while True:
+    number = int(input("Enter Number : "))
+    if number % 2 == 0:
+        print(f"The number {str(number)} is Even")
+    else:
+        print(f"The number {str(number)} is Odd")
+        
+    
+    repeat = input("Do you want to repeat? (Y/N): ")
+    
+    if repeat == "N":
+        print("\nProgram Stops")
+        print("Thank you for using my program ^^")
+        break
