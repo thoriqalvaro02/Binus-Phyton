@@ -1,0 +1,22 @@
+while True:
+    a = float(input("Enter length of side A: "))
+    b = float(input("Enter length of side B: "))
+    c = float(input("Enter length of side C: "))
+
+    if (a + b > c) and (a + c > b) and (b + c > a):
+        sides = sorted([a, b, c])  
+    if round(sides[0]**2 + sides[1]**2, 5) == round(sides[2]**2, 5):
+        print("It is a Right-angled Triangle")
+    elif a == b == c:
+        print("It is an Equilateral Triangle")
+    elif a == b or a == c or b == c:
+        print("It is an Isosceles Triangle")
+    else:
+        print("It is a Scalene Triangle")
+    
+    repeat = input("Do you want to repeat? (Y/N): ")
+    
+    if repeat == "N":
+        print("\nProgram Stops")
+        print("Thank you for using my program ^^")
+        break
