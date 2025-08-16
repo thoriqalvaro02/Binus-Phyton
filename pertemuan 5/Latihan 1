@@ -1,0 +1,54 @@
+def print_identity():
+    print("-----------------------")
+    print("| Thoriq Alvaro Keita |")
+    print("|      Indonesia      |")
+    print("-----------------------")
+    
+def add(a, b):
+    return f"The result of addition {a} + {b} is {a + b}"
+        
+def substract(a, b):
+    return f"The result of substraction {a} - {b} is {a - b}"
+        
+def divide(a, b):
+    return f"The result of division {a} : {b} is {a / b}"
+        
+def multiply(a, b):
+    return f"The result of multiplication {a} x {b} is {a * b}"
+        
+def modulus(a, b):
+    return f"The result of modulus {a} % {b} is {a % b}"
+        
+        
+def main():
+    print_identity()
+    
+    while True:
+        menu = input("Enter Menu (+|-|/|*|%|stop): ").strip()
+        
+        if menu == "stop":
+            print("Program stopped. Thank you for using my program.")
+            break
+        
+        try:
+            value1 = int(input("Enter Value 1: ")) 
+            value2 = int(input("Enter Value 2: "))
+        
+            if menu == '+':
+                print(add(value1, value2))
+            elif menu == '-':
+                print(substract(value1, value2))
+            elif menu == '/':
+                print(divide(value1, value2))
+            elif menu == '*':
+                print(multiply(value1, value2))
+            elif menu == '%':
+                print(modulus(value1, value2))
+            else:
+                print("Invalid Operator")
+    
+        except ValueError:
+            print("Invalid input, please enter numbers")
+        
+main()
+        
