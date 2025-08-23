@@ -1,0 +1,70 @@
+class student:
+    def __init__(self):
+        self.__name = None
+        self.__score = None
+        
+    def get_name(self):
+        return self.__name
+        
+    def get_score(self):
+        return self.__score
+        
+    def set_name(self, name):
+        self.__name = name
+        
+    def set_score(self, score):
+        self.__score = score
+        
+    def reset(self):
+        self.__name = None
+        self.__score = None
+        
+
+student = student()
+
+while True:
+    print("\n===== OOP Program =====")
+    print("1. Declare Object")
+    print("2. Display Object")
+    print("3. Change Object Value")
+    print("4. Delete Object")
+    print("5. Exit Program")
+    choice = input("Enter Your Choice (1/2/3/4/5): ")
+    
+    if choice == "1":
+        name = input("Enter Your Name: ")
+        score = input("Enter Your Score: ")
+        student.set_name(name)
+        student.set_score(score)
+        print("Data Successfully Added")
+        
+    elif choice == "2":
+        print("\nName :", student.get_name())
+        print("Score :", student.get_score())
+        
+    elif choice == "3":
+        if student.get_name() is None and student.get_score() is None:
+            print("No Data Available, Please Declare Object First.")
+        else:
+            what = input("What would you like to change (name/score): ").lower()
+            if what == "name":
+                new_name = input("Enter Your Name: ")
+                student.set_name(new_name)
+                print("Name Data Successfully Changed.")
+            elif what == "score":
+                new_score = input("Enter Your Score: ")
+                student.set_score(new_score)
+                print("Score Data Successfully Changed.")
+            else:
+                print("Invalid Option.")
+        
+    elif choice == "4":
+        student.reset()
+        print("Data Successfully Deleted.")
+        
+    elif choice == "5":
+        print("Thank you for using my program.")
+        break
+    
+    else:
+        print("Invalid Choice, Please Enter 1-5.")
